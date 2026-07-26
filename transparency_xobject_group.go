@@ -68,7 +68,7 @@ func (s TransparencyXObjectGroup) write(w io.Writer, objId int) error {
 	content += "\t/FormType 1\n"
 	content += "\t/Subtype /Form\n"
 	content += fmt.Sprintf("\t/Type /%s\n", s.getType())
-	content += fmt.Sprintf("\t/Matrix [1 0 0 1 0 0]\n")
+	content += "\t/Matrix [1 0 0 1 0 0]\n"
 	content += fmt.Sprintf("\t/BBox [%.3F %.3F %.3F %.3F]\n", s.BBox[0], s.BBox[1], s.BBox[2], s.BBox[3])
 	content += "\t/Group<</CS /DeviceGray /S /Transparency>>\n"
 
